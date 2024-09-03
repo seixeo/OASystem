@@ -5,7 +5,7 @@
 using namespace std;
 
 class OAAdmin {
-    //定义友元类OADataCenter
+    // 定义友元类OADataCenter
     friend class OADataCenter;
 
 private:
@@ -13,21 +13,26 @@ private:
     string _password;
 
 public:
-    //无参构造函数
+    // 无参构造函数
     OAAdmin();
 
-    //有参构造函数
+    // 有参构造函数
     OAAdmin(const string &username, const string &password);
 
-    //创建默认管理对象
+    // 创建默认管理对象
     static OAAdmin ERROR_ADMIN;
 
-    //获取用户名函数
+    // 获取用户名函数
     string username();
 
+    // 添加用户
     static bool addUser(const string &username, const string &password, const string &department);
 
+    // 删除用户
     static bool deleteUser(const string &username);
+
+    // 展示所有用户
+    static void showAllUsers();
 };
 
 

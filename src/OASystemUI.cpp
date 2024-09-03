@@ -11,7 +11,7 @@ using namespace std;
 void showAdminAddUserPage(OAAdmin &admin) {
     system("cls");
     string username, password, department;
-    cout << "请输入需要添加的用户名:";
+    cout << "请输入添加的用户名:";
     cin >> username;
     cout << "请输入该用户的密码:";
     cin >> password;
@@ -40,6 +40,10 @@ void showAdminDeleteUserPage(OAAdmin &admin) {
     }
 }
 
+// 列举所有用户
+void showAdminListUser(OAAdmin &admin) {
+    admin.showAllUsers();
+}
 
 // 管理员的主界面
 void showAdminMainPage(OAAdmin &admin) {
@@ -65,7 +69,7 @@ void showAdminMainPage(OAAdmin &admin) {
                 showAdminDeleteUserPage(admin);
                 break;
             case 3:
-                cout << "列举所有的普通用户" << endl;
+                showAdminListUser(admin);
                 break;
             case 4:
                 cout << "添加一个会议室" << endl;

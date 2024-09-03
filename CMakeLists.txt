@@ -14,4 +14,6 @@ add_executable(OASystem src/main.cpp
         inc/OAUser.h
         src/OADataCenter.cpp
         inc/OADataCenter.h
+        src/OAMeetingRoom.cpp
+        inc/OAMeetingRoom.h
 )
